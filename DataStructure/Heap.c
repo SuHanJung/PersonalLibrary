@@ -29,7 +29,7 @@ int HeapPop(int *heap) {
 
 void HeapIn(int *heap, int input) {
 	heap[++heap[0]] = input;
-	for (int piv = heap[0]; compare(heap[piv], heap[piv / 2]) > 0; piv /= 2) Swap(&heap[piv], &heap[piv / 2]);
+	for (int piv = heap[0]; compare(heap[piv], heap[piv / 2]) > 0 && piv > 1; piv /= 2) Swap(&heap[piv], &heap[piv / 2]);
 }
 
 int HeapOut(int *heap) {
