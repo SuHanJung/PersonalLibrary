@@ -40,9 +40,9 @@ int HeapSize(int *heap) {
 	return heap[0];
 }
 
-void Heap(int* heap, int data[], int size) {
-	heap = malloc(sizeof(int) * (size + 1));
+int* Heap(int data[], int size) {
+	int *heap = malloc(sizeof(int) * (size + 1));
 	heap[0] = 0;
 	for (int t = 0; t < size; t++) HeapIn(heap, data[t]);
-	return;
+	return heap;
 }
