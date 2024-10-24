@@ -29,8 +29,6 @@ int MergeSorting(int* arr, int* ans, int n, int cell) {
 void MergeSort(int* arr, int* ans,int n) {
 	for (int cell = 1; cell < n; cell *= 2) {
 		MergeSorting(arr, ans, n, cell);
-		for (int t = 0; t < 10; t++)printf("%d ", ans[t]);
-		printf("\n");
 	}
 	return;
 }
